@@ -43,6 +43,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.wave.flavour=Rasmalai_Minkan \
     ro.wave.maintainer_name=dlwlrma123
     
+# Perf
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.perf.scroll_opt=true
+
 # ZRAM
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.zram.mark_idle_delay_mins=60 \
