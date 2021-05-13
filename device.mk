@@ -116,6 +116,10 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
+# Platform
+MSMSTEPPE := sm6150
+TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
+
 # Soong namespace
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
