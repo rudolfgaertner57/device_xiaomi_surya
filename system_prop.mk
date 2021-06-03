@@ -49,9 +49,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.zram.first_wb_delay_mins=1440 \
     ro.zram.periodic_wb_delay_hours=24
 
+# Memory optimizations
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.sys.fw.bservice_enable=true
+
 # Zygote
 PRODUCT_PROPERTY_OVERRIDES += \
-     persist.device_config.runtime_native.usap_pool_enabled=true
+    persist.device_config.runtime_native.usap_pool_enabled=true
 
 # Enable app/sf phase offset as durations. The numbers below are translated from the existing
 # positive offsets by finding the duration app/sf will have with the offsets.
