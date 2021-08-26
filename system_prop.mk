@@ -38,6 +38,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.netflix.bsp_rev=Q6150-17263-1
 
+# Wave Properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.wave.flavour=Rasmalai_Minkan \
+    ro.wave.maintainer_name=dlwlrma123
+    
 # ZRAM
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.zram.mark_idle_delay_mins=60 \
