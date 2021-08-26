@@ -170,7 +170,7 @@
     <!-- Control whether the always on display mode is available. This should only be enabled on
          devices where the display has been tuned to be power efficient in DOZE and/or DOZE_SUSPEND
          states. -->
-    <bool name="config_dozeAlwaysOnDisplayAvailable">false</bool>
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
 
     <!-- Control whether the always on display mode is enabled by default. This value will be used
          during initialization when the setting is still null. -->
@@ -179,6 +179,7 @@
     <!-- If true, the doze component is not started until after the screen has been
          turned off and the screen off animation has been performed. -->
     <bool name="config_dozeAfterScreenOffByDefault">true</bool>
+    <bool name="config_displayBlanksAfterDoze">false</bool>
 
     <!-- Power Management: Specifies whether to decouple the auto-suspend state of the
          device from the display on/off state.
@@ -294,7 +295,7 @@
 
     <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
     <integer-array name="config_keyboardTapVibePattern">
-        <item>40</item>
+        <item>22</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about a long screen/key press -->
@@ -302,7 +303,7 @@
         <item>0</item>
         <item>1</item>
         <item>20</item>
-        <item>21</item>
+        <item>22</item>
     </integer-array>
 
     <!-- The bounding path of the cutout region of the main built-in display.
@@ -607,75 +608,75 @@
     <integer-array name="config_virtualKeyVibePattern">
         <item>0</item>
         <item>10</item>
-        <item>20</item>
-        <item>30</item>
+        <item>15</item>
+        <item>25</item>
     </integer-array>
 
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-        <item>"/system/bin/surfaceflinger"</item>
-        <item>"/system/framework/framework.jar"</item>
-        <item>"/system/framework/arm/boot-framework.oat"</item>
-        <item>"/system/framework/arm64/boot-framework.oat"</item>
-        <item>"/system/framework/services.jar"</item>
-        <item>"/system/framework/oat/arm64/services.odex"</item>
-        <item>"/system/framework/ext.jar"</item>
-        <item>"/system/framework/arm/boot-ext.oat"</item>
-        <item>"/system/framework/arm64/boot-ext.oat"</item>
-        <item>"/system/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
-        <item>"/system/system_ext/priv-app/SystemUI/oat/arm64/SystemUI.odex"</item>
-        <item>"/system/lib/libsurfaceflinger.so"</item>
-        <item>"/system/lib64/libsurfaceflinger.so"</item>
-        <item>"/system/lib/libRScpp.so"</item>
-        <item>"/system/lib/libRS.so"</item>
-        <item>"/system/lib/libRS_internal.so"</item>
-        <item>"/system/lib/libbcinfo.so"</item>
-        <item>"/system/lib/libRSDriver.so"</item>
-        <item>"/system/lib/libRSCpuRef.so"</item>
-        <item>"/system/lib/libblas.so"</item>
-        <item>"/system/lib64/libRScpp.so"</item>
-        <item>"/system/lib64/libRS.so"</item>
-        <item>"/system/lib64/libRS_internal.so"</item>
-        <item>"/system/lib64/libbcinfo.so"</item>
-        <item>"/system/lib64/libRSDriver.so"</item>
-        <item>"/system/lib64/libRSCpuRef.so"</item>
-        <item>"/system/lib64/libblas.so"</item>
-        <item>"/apex/com.android.art/javalib/arm64/boot.oat"</item>
-        <item>"/apex/com.android.art/javalib/arm64/boot-core-libart.oat"</item>
-        <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
-        <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
-        <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
-        <item>"/data/dalvik-cache/arm64/system@system_ext@priv-app@SystemUI@SystemUI.apk@classes.dex"</item>
-        <item>"/data/dalvik-cache/arm64/system@system_ext@priv-app@SystemUI@SystemUI.apk@classes.vdex"</item>
+        <item>/system/bin/surfaceflinger</item>
+        <item>/system/framework/framework.jar</item>
+        <item>/system/framework/arm/boot-framework.oat</item>
+        <item>/system/framework/arm64/boot-framework.oat</item>
+        <item>/system/framework/services.jar</item>
+        <item>/system/framework/oat/arm64/services.odex</item>
+        <item>/system/framework/ext.jar</item>
+        <item>/system/framework/arm/boot-ext.oat</item>
+        <item>/system/framework/arm64/boot-ext.oat</item>
+        <item>/system/system_ext/priv-app/SystemUI/SystemUI.apk</item>
+        <item>/system/system_ext/priv-app/SystemUI/oat/arm64/SystemUI.odex</item>
+        <item>/system/lib/libsurfaceflinger.so</item>
+        <item>/system/lib64/libsurfaceflinger.so</item>
+        <item>/system/lib/libRScpp.so</item>
+        <item>/system/lib/libRS.so</item>
+        <item>/system/lib/libRS_internal.so</item>
+        <item>/system/lib/libbcinfo.so</item>
+        <item>/system/lib/libRSDriver.so</item>
+        <item>/system/lib/libRSCpuRef.so</item>
+        <item>/system/lib/libblas.so</item>
+        <item>/system/lib64/libRScpp.so</item>
+        <item>/system/lib64/libRS.so</item>
+        <item>/system/lib64/libRS_internal.so</item>
+        <item>/system/lib64/libbcinfo.so</item>
+        <item>/system/lib64/libRSDriver.so</item>
+        <item>/system/lib64/libRSCpuRef.so</item>
+        <item>/system/lib64/libblas.so</item>
+        <item>/apex/com.android.art/javalib/arm64/boot.oat</item>
+        <item>/apex/com.android.art/javalib/arm64/boot-core-libart.oat</item>
+        <item>/apex/com.android.art/javalib/core-oj.jar</item>
+        <item>/apex/com.android.art/javalib/core-libart.jar</item>
+        <item>/apex/com.android.media/javalib/updatable-media.jar</item>
+        <item>/data/dalvik-cache/arm64/system@system_ext@priv-app@SystemUI@SystemUI.apk@classes.dex</item>
+        <item>/data/dalvik-cache/arm64/system@system_ext@priv-app@SystemUI@SystemUI.apk@classes.vdex</item>
     </string-array>
 
     <!-- List of files pinned by the Pinner Service with the JIT Zygote boot image b/119800099 -->
     <string-array translatable="false" name="config_jitzygoteBootImagePinnerServiceFiles">
-        <item>"/system/bin/surfaceflinger"</item>
-        <item>"/system/framework/framework.jar"</item>
-        <item>"/system/framework/services.jar"</item>
-        <item>"/apex/com.android.art/javalib/arm64/boot.oat"</item>
-        <item>"/apex/com.android.art/javalib/arm64/boot-core-libart.oat"</item>
-        <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
-        <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
-        <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
-        <item>"/system/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
-        <item>"/system/lib/libsurfaceflinger.so"</item>
-        <item>"/system/lib64/libsurfaceflinger.so"</item>
-        <item>"/system/lib/libRScpp.so"</item>
-        <item>"/system/lib/libRS.so"</item>
-        <item>"/system/lib/libRS_internal.so"</item>
-        <item>"/system/lib/libbcinfo.so"</item>
-        <item>"/system/lib/libRSDriver.so"</item>
-        <item>"/system/lib/libRSCpuRef.so"</item>
-        <item>"/system/lib/libblas.so"</item>
-        <item>"/system/lib64/libRScpp.so"</item>
-        <item>"/system/lib64/libRS.so"</item>
-        <item>"/system/lib64/libRS_internal.so"</item>
-        <item>"/system/lib64/libbcinfo.so"</item>
-        <item>"/system/lib64/libRSDriver.so"</item>
-        <item>"/system/lib64/libRSCpuRef.so"</item>
-        <item>"/system/lib64/libblas.so"</item>
+        <item>/system/bin/surfaceflinger</item>
+        <item>/system/framework/framework.jar</item>
+        <item>/system/framework/services.jar</item>
+        <item>/apex/com.android.art/javalib/arm64/boot.oat</item>
+        <item>/apex/com.android.art/javalib/arm64/boot-core-libart.oat</item>
+        <item>/apex/com.android.art/javalib/core-oj.jar</item>
+        <item>/apex/com.android.art/javalib/core-libart.jar</item>
+        <item>/apex/com.android.media/javalib/updatable-media.jar</item>
+        <item>/system/system_ext/priv-app/SystemUI/SystemUI.apk</item>
+        <item>/system/lib/libsurfaceflinger.so</item>
+        <item>/system/lib64/libsurfaceflinger.so</item>
+        <item>/system/lib/libRScpp.so</item>
+        <item>/system/lib/libRS.so</item>
+        <item>/system/lib/libRS_internal.so</item>
+        <item>/system/lib/libbcinfo.so</item>
+        <item>/system/lib/libRSDriver.so</item>
+        <item>/system/lib/libRSCpuRef.so</item>
+        <item>/system/lib/libblas.so</item>
+        <item>/system/lib64/libRScpp.so</item>
+        <item>/system/lib64/libRS.so</item>
+        <item>/system/lib64/libRS_internal.so</item>
+        <item>/system/lib64/libbcinfo.so</item>
+        <item>/system/lib64/libRSDriver.so</item>
+        <item>/system/lib64/libRSCpuRef.so</item>
+        <item>/system/lib64/libblas.so</item>
     </string-array>
 
     <!-- True if home app should be pinned via Pinner Service -->
@@ -792,4 +793,23 @@
     <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
     <bool name="config_zramWriteback">true</bool>
 
+    <!-- Screen off delay --> 
+    <integer name="config_screen_off_delay">0</integer>
+
+    <!-- Smart replies in notifications: Whether we disable the feature unless the app targets P -->
+    <bool name="config_smart_replies_in_notifications_requires_targeting_p">false</bool>
+ 
+    <!-- Flag indicating whether the surface flinger has limited
+         alpha compositing functionality in hardware.  If set, the window
+         manager will disable alpha trasformation in animations where not
+         strictly needed. -->
+    <bool name="config_sf_limitedAlpha">true</bool>
+
+    <!-- Enables or disables fading edges when marquee is enabled in TextView.
+         Off by default, since the framebuffer readback used to implement the
+         fading edges is prohibitively expensive on most GPUs. -->
+    <bool name="config_ui_enableFadingMarquee">true</bool>      
+    
+     <!-- Whether safe headphone volume is enabled or not (country specific). -->
+    <bool name="config_safe_media_volume_enabled">false</bool> 
 </resources>
