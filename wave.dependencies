@@ -1,9 +1,9 @@
 [
     {
-        "repository":  "ghostrider-reborn/android_kernel_xiaomi_surya",
+        "repository":  "dlwlrma123/android_kernel_xiaomi_surya",
         "target_path": "kernel/xiaomi/surya",
         "remote":      "github",
-        "branch":      "stock"
+        "branch":      "arrow-11.0"
     },
     {
         "repository":  "vendor_xiaomi_surya",
