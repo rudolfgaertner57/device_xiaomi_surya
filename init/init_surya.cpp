@@ -101,11 +101,11 @@ void load_device_properties() {
     string description = "redfin-user 11 RQ3A.210805.001.A1 7474174 release-keys";
 
     if (hwname == "surya") {
-        set_device_props(fingerprint, description, "Poco", "surya", "M2007J20CG");
+        set_device_props(fingerprint, description, "Poco", "surya", "POCO X3 NFC (surya)");
         property_override("ro.wave.device_name", "POCO X3 NFC");
         property_override("ro.product.mod_device", "surya_global");
     } else if (hwname == "karna") {
-        set_device_props(fingerprint, description, "Poco", "karna", "M2007J20CI");
+        set_device_props(fingerprint, description, "Poco", "karna", "POCO X3 (karna)");
         property_override("ro.wave.device_name", "POCO X3");
         property_override("ro.product.mod_device", "surya_in_global");
     }
