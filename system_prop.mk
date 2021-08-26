@@ -1,7 +1,19 @@
-# ART
+# Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-filter=everything \
-    dalvik.vm.image-dex2oat-filter=everything
+    dalvik.vm.dex2oat-filter=speed \
+    dalvik.vm.dex2oat-threads=8 \
+    dalvik.vm.dex2oat64.enabled=true \
+    dalvik.vm.heapgrowthlimit=256m \
+    dalvik.vm.heapmaxfree=8m \
+    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heapstartsize=8m \
+    dalvik.vm.heaptargetutilization=0.75 \
+    dalvik.vm.image-dex2oat-filter=speed \
+    dalvik.vm.image-dex2oat-threads=8 \
+    pm.dexopt.boot=verify \
+    pm.dexopt.first-boot=verify \
+    pm.dexopt.install=speed-profile \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -11,6 +23,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.btstack.enable.twsplus=true \
     persist.vendor.btstack.enable.twsplussho=true \
     ro.bluetooth.library_name=libbluetooth_qti.so \
+    persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24 \
     vendor.bluetooth.soc=cherokee
 
 # Display
@@ -28,7 +41,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # ZRAM
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.zram.mark_idle_delay_mins=60 \
-    ro.zram.first_wb_delay_mins=180 \
+    ro.zram.first_wb_delay_mins=1440 \
     ro.zram.periodic_wb_delay_hours=24
 
 # Zygote

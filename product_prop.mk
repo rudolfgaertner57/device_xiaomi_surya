@@ -17,29 +17,85 @@ PRODUCT_PRODUCT_PROPERTIES += \
     vendor.camera.aux.packagelist=com.android.camera,net.sourceforge.opencamera,org.codeaurora.snapcam \
     media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
+# Blurs
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.surface_flinger.supports_background_blur=1 \
+    ro.sf.blurs_are_expensive=1
+    
 # Charger
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.charger.enable_suspend=true
 
+# Disable Rescue Party
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.disable_rescue=true \
+    persist.device_config.configuration.disable_rescue_party=true
+
+# DRM
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true
+        
 # Dex2oat
 PRODUCT_PRODUCT_PROPERTIES += \
      dalvik.vm.dex2oat64.enabled=true
 
+#Gboard Configuration by Vern
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.ime.corner_key_l=35 \
+    ro.com.google.ime.corner_key_r=35 \
+    ro.com.google.ime.themed_nav_bar_style=2 \
+    ro.com.google.ime.silk_theme=true \
+    ro.com.google.ime.pill_shaped_key=true \
+    ro.com.google.ime.enable_keyboard_redesign=true \
+    ro.com.google.ime.use_keyboard_redesign_theme_by_default=true \
+    ro.com.google.ime.kb_pad_port_r=8.0 \
+    ro.com.google.ime.kb_pad_port_l=8.0 \
+    ro.com.google.ime.kb_pad_port_b=1 \
+    ro.com.google.ime.kb_pad_land_r=96.0 \
+    ro.com.google.ime.kb_pad_land_l=96.0
+    
 # Graphics
 PRODUCT_PRODUCT_PROPERTIES += \
-    debug.hwui.renderer=skiavk \
+    debug.hwui.renderer=opengl \
+    debug.cpurend.vsync=false \
+    debug.sf.enable_gl_backpressure=1 \
     debug.sf.disable_backpressure=1 \
     debug.sf.latch_unsignaled=1 \
+    ro.surface_flinger.has_wide_color_display=false \
+    ro.surface_flinger.use_color_management=true \
+    ro.surface_flinger.has_HDR_display=true \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+    ro.surface_flinger.protected_contents=true \
+    ro.surface_flinger.wcg_composition_dataspace=143261696 \
+    ro.surface_flinger.running_without_sync_framework=true \
+    ro.surface_flinger.use_context_priority=true \
+    ro.surface_flinger.max_virtual_display_dimension=4096 \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     vendor.display.disable_rotator_downscale=1 \
+    vendor.display.disable_offline_rotator=1 \
+    ro.hardware.egl=adreno \
+    ro.hardware.vulkan=adreno \
     ro.surface_flinger.has_wide_color_display=false
 
 # LMKD
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.low_ram=false \
-    ro.lmk.log_stats=true
+    ro.lmk.psi_complete_stall_ms=150 \
+    ro.lmk.low=1001 \
+    ro.lmk.medium=800 \
+    ro.lmk.critical=0 \
+    ro.lmk.critical_upgrade=false \
+    ro.lmk.upgrade_pressure=100 \
+    ro.lmk.downgrade_pressure=100 \
+    ro.lmk.swap_free_low_percentage=20 
 
+# Power-saving props
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.vendor.use_data_netmgrd=true \
+    ro.vold.umsdirtyratio=20 \
+    ro.ril.disable.power.collapse=0 \
+    power.saving.mode=1 \
+    pm.sleep_mode=1
+    
 # Smart fps switching
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.vendor.smart_dfps.enable=false
