@@ -61,6 +61,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     debug.sf.enable_gl_backpressure=1 \
     debug.sf.disable_backpressure=1 \
     debug.sf.latch_unsignaled=1 \
+    ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30 \
     ro.surface_flinger.has_wide_color_display=false \
     ro.surface_flinger.use_color_management=true \
     ro.surface_flinger.has_HDR_display=true \
@@ -121,8 +122,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Dynamic RR
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.set_display_power_timer_ms=1000 \
-    ro.surface_flinger.set_idle_timer_ms=80 \
-    ro.surface_flinger.set_touch_timer_ms=200 \
+    ro.surface_flinger.set_idle_timer_ms=4000 \
+    ro.surface_flinger.set_touch_timer_ms=4000 \
     ro.surface_flinger.support_kernel_idle_timer=true \
+    vendor.display.idle_time=0 \
+    vendor.display.idle_time_inactive=0 \
+    vendor.display.disable_metadata_dynamic_fps=1 \
     ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
