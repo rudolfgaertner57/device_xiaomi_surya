@@ -1,13 +1,17 @@
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-filter=speed \
-    dalvik.vm.dex2oat-threads=6 \
     dalvik.vm.dex2oat64.enabled=true \
-    dalvik.vm.image-dex2oat-filter=speed \
+    dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5 \
+    dalvik.vm.dex2oat-threads=6 \
+    dalvik.vm.dex2oat-filter=speed \
+    dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5 \
     dalvik.vm.image-dex2oat-threads=6 \
+    dalvik.vm.image-dex2oat-filter=speed \
+    dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
+    dalvik.vm.boot-dex2oat-threads=8 \
     pm.dexopt.boot=verify \
     pm.dexopt.first-boot=verify \
-    pm.dexopt.install=speed-profile \
+    pm.dexopt.install=speed-profile
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -23,7 +27,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=440
+    ro.sf.lcd_density=420
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -56,17 +60,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
 
-# Enable app/sf phase offset as durations. The numbers below are translated from the existing
-# positive offsets by finding the duration app/sf will have with the offsets.
-# For SF the previous value was 6ms which under 16.6ms vsync time (60Hz) will leave SF with ~10.5ms
-# for each frame. For App the previous value was 2ms which under 16.6ms vsync time will leave the
-# App with ~20.5ms (16.6ms * 2 - 10.5ms - 2ms). The other values were calculated similarly.
-# Full comparison between the old vs. the new values are captured in
-# https://docs.google.com/spreadsheets/d/1a_5cVNY3LUAkeg-yL56rYQNwved6Hy-dvEcKSxp6f8k/edit
-PRODUCT_PROPERTY_OVERRIDES += debug.sf.use_phase_offsets_as_durations=1
-PRODUCT_PROPERTY_OVERRIDES += debug.sf.late.sf.duration=10500000
-PRODUCT_PROPERTY_OVERRIDES += debug.sf.late.app.duration=20500000
-PRODUCT_PROPERTY_OVERRIDES += debug.sf.early.sf.duration=21000000
-PRODUCT_PROPERTY_OVERRIDES += debug.sf.early.app.duration=16500000
-PRODUCT_PROPERTY_OVERRIDES += debug.sf.earlyGl.sf.duration=13500000
-PRODUCT_PROPERTY_OVERRIDES += debug.sf.earlyGl.app.duration=21000000
+# SF
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.early_app_phase_offset_ns=500000 \
+    debug.sf.early_gl_app_phase_offset_ns=15000000 \
+    debug.sf.early_gl_phase_offset_ns=3000000 \
+    debug.sf.early_phase_offset_ns=500000 \
+    debug.sf.high_fps_early_gl_phase_offset_ns=6500000 \
+    debug.sf.high_fps_early_phase_offset_ns=6100000 \
+    debug.sf.high_fps_late_app_phase_offset_ns=1000000 \
+    debug.sf.phase_offset_threshold_for_next_vsync_ns=12100000
