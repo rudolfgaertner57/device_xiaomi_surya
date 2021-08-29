@@ -61,6 +61,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     debug.sf.enable_gl_backpressure=1 \
     debug.sf.disable_backpressure=1 \
     debug.sf.latch_unsignaled=1 \
+    debug.renderengine.backend=skiaglthreaded \
     ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30 \
     ro.surface_flinger.has_wide_color_display=false \
     ro.surface_flinger.use_color_management=true \
