@@ -126,8 +126,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Dynamic RR
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.set_display_power_timer_ms=1000 \
-    ro.surface_flinger.set_idle_timer_ms=500 \
-    ro.surface_flinger.set_touch_timer_ms=750 \
+    ro.surface_flinger.set_idle_timer_ms=4000 \
+    ro.surface_flinger.set_touch_timer_ms=4000 \
     ro.surface_flinger.support_kernel_idle_timer=true \
     vendor.display.idle_time=0 \
     vendor.display.idle_time_inactive=0 \
