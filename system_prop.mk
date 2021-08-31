@@ -9,8 +9,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.image-dex2oat-filter=speed \
     dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
     dalvik.vm.boot-dex2oat-threads=8 \
+    ro.vendor.qti.am.reschedule_service=true
+    ro.sys.fw.dex2oat_thread_count=8
     pm.dexopt.boot=verify \
     pm.dexopt.first-boot=verify \
+    pm.dexopt.ab-ota=speed-profile \
     pm.dexopt.install=speed-profile
 
 # Bluetooth
