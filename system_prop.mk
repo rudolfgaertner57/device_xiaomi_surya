@@ -42,7 +42,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Wave Properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.wave.flavour=Rasmalai_Minkan \
     ro.wave.maintainer_name=dlwlrma123
     
 # Perf
