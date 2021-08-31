@@ -56,7 +56,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 # Graphics
 PRODUCT_PRODUCT_PROPERTIES += \
-    debug.hwui.renderer=opengl \
+    debug.hwui.renderer=skiagl \
     debug.cpurend.vsync=false \
     debug.sf.enable_gl_backpressure=1 \
     debug.sf.disable_backpressure=1 \
