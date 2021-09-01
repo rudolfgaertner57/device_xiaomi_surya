@@ -4,7 +4,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := RemovePackages
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
-LOCAL_OVERRIDES_PACKAGES := AmbientSensePrebuilt AppDirectedSMSService arcore
+LOCAL_OVERRIDES_PACKAGES := AudioFX AmbientSensePrebuilt AppDirectedSMSService arcore
 LOCAL_OVERRIDES_PACKAGES += CarrierSetup Chrome Chrome-Stub ConnMO ConnMetrics
 LOCAL_OVERRIDES_PACKAGES += DCMO DevicePolicyPrebuilt DMService Drive 
 LOCAL_OVERRIDES_PACKAGES += GCS
