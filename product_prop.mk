@@ -41,6 +41,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.dirac.speaker=true \
     persist.dirac.acs.controller=qem \
     persist.dirac.acs.storeSettings=1 \
+    ro.audio.soundfx.dirac=true \
+    persist.audio.dirac.speaker=true \
+    vendor.audio.safx.pbe.enabled=false \
     persist.dirac.acs.ignore_error=1
 
 # Dex2oat
