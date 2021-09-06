@@ -52,8 +52,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 #Gboard Configuration by Vern
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.ime.corner_key_l=35 \
-    ro.com.google.ime.corner_key_r=35 \
     ro.com.google.ime.themed_nav_bar_style=2 \
     ro.com.google.ime.silk_theme=true \
     ro.com.google.ime.pill_shaped_key=true \
