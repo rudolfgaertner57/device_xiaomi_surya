@@ -57,7 +57,7 @@
     <string name="dirac_preset_bass_booster">Bass Booster</string>
 
      <!-- QS tile title -->
-    <string name="dirac_qs_tile_title">Mi Sound Enhancer</string>
+    <string name="dirac_qs_tile_title">Dirac™ Sound</string>
 
     <!-- Thermal Profiles -->
     <string name="thermal_title">Thermal Profiles and Game Mode</string>
