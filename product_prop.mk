@@ -35,18 +35,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
 
-# Dirac
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.audio.soundfx.dirac=true \
-    hpx_send_params=1 
-    persist.audio.dirac.speaker=true \
-    persist.dirac.acs.controller=qem \
-    persist.dirac.acs.storeSettings=1 \
-    ro.audio.soundfx.dirac=true \
-    persist.audio.dirac.speaker=true \
-    vendor.audio.safx.pbe.enabled=false \
-    persist.dirac.acs.ignore_error=1
-
 # Dex2oat
 PRODUCT_PRODUCT_PROPERTIES += \
      dalvik.vm.dex2oat64.enabled=true

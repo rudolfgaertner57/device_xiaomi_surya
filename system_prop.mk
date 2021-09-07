@@ -28,6 +28,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24 \
     vendor.bluetooth.soc=cherokee
 
+# Dirac
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.audio.soundfx.dirac=true \
+    hpx_send_params=1 \
+    persist.audio.dirac.speaker=true \
+    persist.dirac.acs.controller=qem \
+    persist.dirac.acs.storeSettings=1 \
+    ro.audio.soundfx.dirac=true \
+    vendor.audio.safx.pbe.enabled=false \
+    persist.audio.dirac.music.state=1 \
+    persist.dirac.acs.ignore_error=1
+    
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=420

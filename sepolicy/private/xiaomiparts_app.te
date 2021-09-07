@@ -18,6 +18,8 @@ allow xiaomiparts_app {
 
 allow xiaomiparts_app system_app_data_file:dir create_dir_perms;
 allow xiaomiparts_app system_app_data_file:{ file lnk_file } create_file_perms;
+# Dirac
+allow xiaomiparts_app dirac_prop:property_service { set };
 
 allow xiaomiparts_app {
   cgroup
