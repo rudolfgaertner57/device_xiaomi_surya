@@ -38,6 +38,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.soundfx.dirac=true \
     vendor.audio.safx.pbe.enabled=false \
     persist.audio.dirac.music.state=1 \
+    audio.dirac.logging=0 \
     persist.dirac.acs.ignore_error=1
     
 # Display
