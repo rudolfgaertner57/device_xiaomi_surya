@@ -19,3 +19,6 @@ type vendor_firmware_file, vendor_file_type, file_type;
 
 type sysfs_fps, sysfs_type, fs_type;
 type proc_nvt_feature, proc_type, fs_type;
+
+# Kcal
+type kcal_dev, sysfs_type, fs_type;

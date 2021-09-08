@@ -24,3 +24,8 @@
 
 # Measured FPS
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps                      u:object_r:sysfs_fps:s0
+
+# Kcal
+/sys/devices/platform/kcal_ctrl.0(/.*)?                      u:object_r:kcal_dev:s0
+/sys/bus/platform/drivers/kcal_ctrl(/.*)?                    u:object_r:kcal_dev:s0
+/sys/class/thermal/thermal_message(/.*)?                      u:object_r:sysfs_thermal:s0
