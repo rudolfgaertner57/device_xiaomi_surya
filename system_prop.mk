@@ -52,15 +52,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Netflix
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.netflix.bsp_rev=Q6150-17263-1
-
-# Wave Properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.wave.maintainer_name=dlwlrma123
     
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.perf.scroll_opt=true
 
+# Wave Properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.wave.maintainer_name=dlwlrma123 \
+    ro.wave.releasetype=Minkan
+    
 # ZRAM
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.zram.mark_idle_delay_mins=60 \
